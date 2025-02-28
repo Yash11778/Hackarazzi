@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import io from 'socket.io-client';
+import Navbar from "./Navbar";
 
 const socket = io('http://192.168.82.143:5000');
 
@@ -64,6 +65,7 @@ const VideoChat = () => {
 
   return (
     <div>
+      <Navbar />
       <video ref={localVideoRef} autoPlay playsInline muted />
       <video ref={remoteVideoRef} autoPlay playsInline />
       <button onClick={createOffer}>Start Call</button>
