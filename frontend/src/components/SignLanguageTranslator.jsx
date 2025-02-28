@@ -7,7 +7,7 @@ const SignLanguageTranslator = ({ videoRef }) => {
   useEffect(() => {
     const loadModel = async () => {
       // Load the pre-trained model
-      const model = await tf.loadGraphModel('/path/to/your/model.json');
+      const model = await tf.loadGraphModel('../../Sign-Language-To-Text-Conversion-main/Models/model_new.json');
       return model;
     };
 
